@@ -1,0 +1,20 @@
+===== when cannot push to github 
+after generate new token
+git remote set-url origin https://<token>@github.com/<username>/<repo>
+
+
+================== login 
+https://www.malasngoding.com/membuat-login-dengan-codeigniter/
+
+
+
+============= md5 has decrypt and encrypt :
+https://www.dcode.fr/md5-hash
+
+10406c1d7b7421b1a56f0d951e952a95 : malasngoding123
+aslanadmin : a9c2ad33d40b06c541527cc0ebce25e2
+aslanuser : 95491f32538a29ead3e5feceed0fcdea
+
+
+==== datatables :
+https://www.codekop.com/read/tutorial-cara-membuat-datatables-serverside-dengan-codeigniter.html
