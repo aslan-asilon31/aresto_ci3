@@ -13,7 +13,6 @@ class Welcome extends CI_Controller {
 
 	public function login(){
 		$data['title'] = 'Login Page';
-
 		$this->load->view('auth/login_vw',$data);
 	}
 

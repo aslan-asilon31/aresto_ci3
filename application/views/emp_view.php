@@ -15,22 +15,20 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title"><?= $title; ?></h3>
-                
-
+                <h3 class="card-title">Employee Table</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
 
                 <!-- Table -->
-                <table id='prodTable' class='display dataTable'>
+                <table id='empTable' class='display dataTable'>
                 <thead>
                     <tr>
-                    <th>Actions アクション</th>
-                    <th>Name 名前 </th>
-                    <th>Price 価格 </th>
-                    <th>Category カテゴリ</th>
-                    <th>Qty 数量</th>
+                    <th>Employee name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Salary</th>
+                    <th>City</th>
                     </tr>
                 </thead>
 
@@ -51,10 +49,10 @@
     </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer">
-      <strong>Copyright &copy; 2023 <a href="aslanasilon.com">aslanasilon.com</a>.</strong>
+      <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
       All rights reserved.
       <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 1.0.0
+        <b>Version</b> 3.2.0
       </div>
     </footer>
   
@@ -67,39 +65,23 @@
   <!-- ./wrapper -->
   
 
-  <!-- Script -->
-  <script type="text/javascript">
+     <!-- Script -->
+     <script type="text/javascript">
      $(document).ready(function(){
-        $('#prodTable').DataTable({
+        $('#empTable').DataTable({
           'processing': true,
           'serverSide': true,
           'serverMethod': 'post',
           'ajax': {
-             'url':'<?=base_url()?>index.php/Product/prodList'
+             'url':'<?=base_url()?>index.php/Employee/empList'
           },
           'columns': [
-              {
-                  // Added Actions column with buttons
-                  data: null,
-                  render: function(data, type, row) {
-                      return '<button class="btn bg-indigo text-white"> <i class="fa fa-wrench"></i> </button> &nbsp;&nbsp;' +
-                          '<button class="btn btn-warning text-white"><i class="fa fa-history"></i></button> &nbsp;&nbsp;' +
-                          '<button class="btn bg-pink text-white"><i class="fa fa-eye"></i></button>';
-
-                  },
-                  width: '150px'
-              },
-             { data: 'name' },
-             {
-                data: 'price',
-                render: function(data, type, row) {
-                  // Tambahkan simbol dollar pada akhiran harga
-                  return '¥' + data;
-                }
-             },
-             { data: 'category' },
-             { data: 'qty' },
+             { data: 'emp_name' },
+             { data: 'email' },
+             { data: 'gender' },
+             { data: 'salary' },
+             { data: 'city' },
           ]
         });
      });
-  </script>
+     </script>

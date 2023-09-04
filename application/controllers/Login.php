@@ -8,11 +8,13 @@ class Login extends CI_Controller {
         parent::__construct();
         $this->load->model('m_login'); // Load the model
     }
-    
+        
 	public function index()
 	{
 		$data['title'] = 'Login Page';
+		$this->load->view('layouts/auth_header',$data);
 		$this->load->view('auth/login_vw', $data); 
+		$this->load->view('layouts/auth_footer',$data);
 	}
 
     function aksi_login(){
